@@ -3,4 +3,23 @@
 {% block content %}
 <h1> Hello Awinas You are viewing HTML Content !!! Your short name is {{name}}</h1>
 
+<h2> GET ADD</h2>
+<form action="add">
+
+    Enter 1st number : <input type="text" name="num1"><br>
+    Enter 2st number : <input type="text" name="num2"><br>
+    <input type="submit">
+
+</form>
+
+<h2> POST ADD</h2>
+<form action="addpost" method="POST">
+    {% csrf_token %}
+    Enter 1st number : <input type="text" name="num1"><br>
+    Enter 2st number : <input type="text" name="num2"><br>
+    <input type="submit">
+
+</form>
+
+
 {% endblock%}
